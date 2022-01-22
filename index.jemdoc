@@ -9,14 +9,26 @@ This is my personalized web page. My major is Computer Science.
 ~~~
 
 == Education
-- wait
+- M.S., Computer Science and Technology, Jun 2022
+- B.S., Software Engineering, Jun 2019
 
 == Research
-- wait
+- Probabilistic latent variables models and applications to recommender systems
+  and causal inference.
 
 == Experience
 - wait
 
 == Papers
 
-Wait for updating!
+*Preprints*
+
+:{/Sequential behavior recommendation based on user’s latent state and dependency learning/
+\[[http://www.joca.cn/CN/10.11772/j.issn.1001-9081.2021101765] PDF\]
+}
+Wen Wen and Fangyu Liang, 2021.
+
+:{/基于用户潜在状态及依赖关系学习的时序行为推荐/
+\[[http://www.joca.cn/CN/10.11772/j.issn.1001-9081.2021101765] PDF\]
+}
+温雯和梁方宇, /计算机应用/, 2021.
