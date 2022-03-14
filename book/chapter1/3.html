@@ -1,0 +1,437 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>The use of libxml2 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4.html" />
+    
+    
+    <link rel="prev" href="2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Chapter 1 Linux c</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    Multiple process programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    Environment Setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    The use of libxml2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    键值对file操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chapter 2 Tensorflow</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chapter2/4.html">
+            
+                <a href="../chapter2/4.html">
+            
+                    
+                    Neural network optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >The use of libxml2</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="the-use-of-libxml2">The use of libxml2</h1>
+<p>   2017&#x5E74;12&#x6708;22&#x65E5; &#x661F;&#x671F;&#x4E94;&#xFF1A;
+   dpkg -L libxml2-dev &#x67E5;&#x770B;libxml&#x5934;&#x6587;&#x4EF6;&#x548C;&#x94FE;&#x63A5;&#x5E93;&#x6240;&#x5728;&#x4F4D;&#x7F6E;
+&#x5BF9;C&#x6E90;&#x6587;&#x4EF6;&#x7F16;&#x8BD1;&#x547D;&#x4EE4;&#xFF1A;
+gcc -I/usr/include/libxml2 CreateXmlFile.c -o CreateXmlFile -L /usr/lib/i386-linux-gnu -lxml2
+      &#x5176;&#x4E2D;&#xFF0C;-I&#x53C2;&#x6570;&#x662F;&#x4E3A;&#x4E86;&#x6307;&#x5B9A;gcc&#x7F16;&#x8BD1;&#x5668;&#x67E5;&#x627E;&#x5934;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;-L&#x53C2;&#x6570;&#x662F;&#x4E3A;&#x4E86;&#x6307;&#x5B9A;libxml2&#x5E93;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x6700;&#x540E;&#x7684;-lxml2&#x6307;&#x5B9A;&#x5177;&#x4F53;&#x7684;&#x5E93;&#x6587;&#x4EF6;&#x3002;&#xFF08;-lxml2&#x4E00;&#x5B9A;&#x8981;&#x653E;&#x5728;&#x547D;&#x4EE4;&#x7684;&#x6700;&#x540E;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x51FA;&#x73B0;&#x627E;&#x4E0D;&#x5230;&#x94FE;&#x63A5;&#x5E93;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF09;
+<img src="1.png" alt=""> 
+&#x7F16;&#x7A0B;&#x793A;&#x4F8B;&#xFF1A;
+1&#x3001;&#x521B;&#x5EFA;xml</p>
+<pre><code>#include&lt;stdio.h&gt;
+#include&lt;libxml/parser.h&gt;
+#include&lt;libxml/tree.h&gt;
+
+int main(int argc, char **argv){
+     //Define document pointer
+     xmlDocPtr doc = xmlNewDoc(BAD_CAST&quot;1.0&quot;);
+        //Define node pointer
+     xmlNodePtr root_node = xmlNewNode(NULL,BAD_CAST&quot;root&quot;);
+     //Set the root element of the document
+     xmlDocSetRootElement(doc,root_node);
+     //Create child nodes directly in the root node
+     xmlNewTextChild(root_node,NULL,BAD_CAST&quot;newnode1&quot;,BAD_CAST&quot;newnode1 content&quot;);
+     xmlNewTextChild(root_node,NULL,BAD_CAST&quot;newnode2&quot;,BAD_CAST&quot;newnode2 content&quot;);
+     //Create a new node
+     xmlNodePtr node = xmlNewNode(NULL,BAD_CAST&quot;node2&quot;);
+     //Create a new text node
+     xmlNodePtr content = xmlNewText(BAD_CAST&quot;NODE CONTENT&quot;);
+     //Add a new node to parent
+     xmlAddChild(root_node,node);
+     xmlAddChild(node,content);
+     //Create a new property carried by a node
+     xmlNewProp(node,BAD_CAST&quot;attribute&quot;,BAD_CAST&quot;yes&quot;);
+     //Create a son and grandson node element
+     node = xmlNewNode(NULL,BAD_CAST&quot;son&quot;);
+     xmlAddChild(root_node,node);
+     xmlNodePtr grandson = xmlNewNode(NULL,BAD_CAST&quot;grandson&quot;);
+     xmlAddChild(node,grandson);
+     xmlAddChild(grandson,xmlNewText(BAD_CAST&quot;THis is a grandson node&quot;));
+     //Dump an XML document to a file
+     int nRel = xmlSaveFile(&quot;CreatedXml.xml&quot;,doc);
+     if(nRel != -1)
+      printf(&quot;&#x4E00;&#x4E2A;xml&#x6587;&#x6863;&#x88AB;&#x521B;&#x5EFA;&#xFF0C;&#x5199;&#x5165; %d &#x4E2A;&#x5B57;&#x8282;\n&quot;,nRel);
+     //Free up all the structures used by a document,tree included
+     xmlFreeDoc(doc);
+     //printf(&quot;Hello World!\n&quot;);
+     return 0;
+}
+</code></pre><p>&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot;?&gt; 
+&lt;root&gt;&lt;newnode1&gt;newnode1 content&lt;/newnode1&gt;&lt;newnode2&gt;newnode2 content&lt;/newnode2&gt;&lt;node2 attribute=&quot;yes&quot;&gt;NODE CONTENT&lt;/node2&gt;&lt;son&gt;&lt;grandson&gt;THis is a grandson node&lt;/grandson&gt;&lt;/son&gt;&lt;/root&gt;
+</code></pre><p>2&#x3001;&#x89E3;&#x6790;xml</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;libxml/parser.h&gt;
+#include &lt;libxml/tree.h&gt;
+
+int main (int argc , char **argv)
+{
+xmlDocPtr pdoc = NULL;
+xmlNodePtr proot = NULL, pcur = NULL;
+/*****************&#x6253;&#x5F00;xml&#x6587;&#x6863;********************/
+xmlKeepBlanksDefault(0);//&#x5FC5;&#x987B;&#x52A0;&#x4E0A;&#xFF0C;&#x9632;&#x6B62;&#x7A0B;&#x5E8F;&#x628A;&#x5143;&#x7D20;&#x524D;&#x540E;&#x7684;&#x7A7A;&#x767D;&#x6587;&#x672C;&#x7B26;&#x53F7;&#x5F53;&#x4F5C;&#x4E00;&#x4E2A;node
+pdoc = xmlReadFile (&quot;test.xml&quot;, &quot;UTF-8&quot;, XML_PARSE_RECOVER);//libxml&#x53EA;&#x80FD;&#x89E3;&#x6790;UTF-8&#x683C;&#x5F0F;&#x6570;&#x636E;
+
+if (pdoc == NULL)        //&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6253;&#x5F00;&#x6B63;&#x786E;
+{
+printf (&quot;error:can&apos;t open file!\n&quot;);
+exit (1);
+}
+
+/*****************&#x83B7;&#x53D6;xml&#x6587;&#x6863;&#x5BF9;&#x8C61;&#x7684;&#x6839;&#x8282;&#x5BF9;&#x8C61;********************/
+proot = xmlDocGetRootElement (pdoc);
+
+if (proot == NULL)
+{
+printf(&quot;error: file is empty!\n&quot;);
+exit (1);
+}
+
+/*****************&#x67E5;&#x627E;&#x4E66;&#x5E97;&#x4E2D;&#x6240;&#x6709;&#x4E66;&#x7C4D;&#x7684;&#x540D;&#x79F0;********************/
+pcur = proot-&gt;xmlChildrenNode;
+
+while (pcur != NULL)
+{
+//&#x5982;&#x540C;&#x6807;&#x51C6;C&#x4E2D;&#x7684;char&#x7C7B;&#x578B;&#x4E00;&#x6837;&#xFF0C;xmlChar&#x4E5F;&#x6709;&#x52A8;&#x6001;&#x5185;&#x5B58;&#x5206;&#x914D;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x64CD;&#x4F5C;&#x7B49; &#x76F8;&#x5173;&#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;xmlMalloc&#x662F;&#x52A8;&#x6001;&#x5206;&#x914D;&#x5185;&#x5B58;&#x7684;&#x51FD;&#x6570;&#xFF1B;xmlFree&#x662F;&#x914D;&#x5957;&#x7684;&#x91CA;&#x653E;&#x5185;&#x5B58;&#x51FD;&#x6570;&#xFF1B;xmlStrcmp&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#x7B49;&#x3002;
+//&#x5BF9;&#x4E8E;char* ch=&quot;book&quot;, xmlChar* xch=BAD_CAST(ch)&#x6216;&#x8005;xmlChar* xch=(const xmlChar *)(ch)
+//&#x5BF9;&#x4E8E;xmlChar* xch=BAD_CAST(&quot;book&quot;)&#xFF0C;char* ch=(char *)(xch)
+if (!xmlStrcmp(pcur-&gt;name, BAD_CAST(&quot;book&quot;)))
+{
+xmlNodePtr nptr=pcur-&gt;xmlChildrenNode;
+while (pcur != NULL)
+{
+if (!xmlStrcmp(nptr-&gt;name, BAD_CAST(&quot;title&quot;)))
+{
+printf(&quot;title: %s\n&quot;,((char*)XML_GET_CONTENT(nptr-&gt;xmlChildrenNode)));
+break;
+}
+}
+
+}
+pcur = pcur-&gt;next;
+}
+
+/*****************&#x91CA;&#x653E;&#x8D44;&#x6E90;********************/
+xmlFreeDoc (pdoc);
+xmlCleanupParser ();
+xmlMemoryDump ();
+return 0;
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2.html" class="navigation navigation-prev " aria-label="Previous page: Environment Setting">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="4.html" class="navigation navigation-next " aria-label="Next page: 键值对file操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"The use of libxml2","level":"1.4","depth":1,"next":{"title":"键值对file操作","level":"1.5","depth":1,"path":"chapter1/4.md","ref":"chapter1/4.md","articles":[]},"previous":{"title":"Environment Setting","level":"1.3","depth":1,"path":"chapter1/2.md","ref":"chapter1/2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","livereload"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/3.md","mtime":"2018-05-25T14:50:46.926Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-25T17:51:33.489Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
